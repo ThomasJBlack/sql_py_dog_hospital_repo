@@ -1,0 +1,28 @@
+<html>
+
+<head>
+	<title>Hospital Home Page</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+	<header>
+		Dog Hospital Home Page
+	</header>
+	<main>
+		<form action="/dogs" method="POST">
+			<input type="submit" value="Dogs" />
+			<input name="updating_dog" value={{False}} hidden />
+		</form>
+		<form action="/doctors" method="POST">
+			<input type="submit" value="Doctors" />
+			<input name="updating_dog" value={{False}} hidden />
+		</form>
+		<form action="/maladies" method="POST">
+			<input type="submit" value="Maladies" />
+			<input name="updating_dog" value={{False}} hidden />
+		</form>
+	</main>
+</body>
+
+</html>

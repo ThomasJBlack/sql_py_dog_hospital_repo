@@ -1,0 +1,23 @@
+* {
+	border: .1rem solid black;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0 20rem;
+
+	background-image: url();
+	text-align: center;
+	align-items: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+	justify-content: space-evenly;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	width: 55rem;
+}

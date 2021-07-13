@@ -1,0 +1,34 @@
+<html>
+
+<head>
+	<title>Dog Page</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+	<header>
+		Dog Page
+	</header>
+	<main>
+		<!-- <h1>{{all_data}}</h1> -->
+		{% for dog in all_data %}
+		<form action="/dogs" method="POST">
+			<input name="id" value={{dog}} hidden />
+			Name: <input name="name" value="{{all_data[dog]['Name']}}" />
+			Doctor: <input name="doctor" value="{{all_data[dog]['Doctor']}}" />
+			Malady: <input name="malady" value="{{all_data[dog]['Malady']}}" />
+			Breed: <input name="breed" value="{{all_data[dog]['Breed']}}" />
+			<input type="submit" value="Update" />
+			<input name="updating_dog" value={{True}} hidden />
+		</form>
+		{% endfor %}
+		<input name="add_dog" value= />
+	</main>
+	<footer>
+		<form action="/" method="POST">
+			<input type="Submit" value="Home Page" />
+		</form>
+	</footer>
+</body>
+
+</html>

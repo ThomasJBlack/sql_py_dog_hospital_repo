@@ -1,0 +1,26 @@
+<html>
+
+<head>
+	<title>Edit Page</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+	<header>
+		Edit Page
+	</header>
+	<main>
+		<form action="/dogs" method="POST">
+			Name: <input name="name" value="{{name}}" />
+			Doctor: <input name="doctor" value="{{doctor}}" />
+			Malady: {<input name="malady" value="{{malady}}" />
+			Breed: <input name="breed" value="{{breed}}" />
+			<input type="submit" value="Save" />
+		</form>
+	</main>
+	<footer>
+		footer
+	</footer>
+</body>
+
+</html>
